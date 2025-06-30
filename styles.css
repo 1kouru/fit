@@ -7,30 +7,43 @@ body {
     align-items: center;
   }
   
+  .logo-container {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .logo {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+  }
+  
   .container {
     display: flex;
     justify-content: center;
-    gap: 40px; /* было 80px */
-    margin-top: 20px; /* чуть меньше сверху */
+    gap: 40px;
+    margin-top: 20px;
     flex-wrap: wrap;
   }
   
   .column {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* было 20px */
+    gap: 10px;
     align-items: center;
   }
   
   .item {
-    width: 300px; /* ПК: большие вещи */
+    width: 280px;
     height: auto;
     object-fit: contain;
     border-radius: 10px;
   }
   
   .generate-btn {
-    margin-top: 30px; /* было 50px */
+    margin-top: 30px;
   }
   
   button {
@@ -47,19 +60,16 @@ body {
     background-color: #333;
   }
   
-  /* ======= Мобильная версия ======= */
+  /* ✅ Оставляем такую же раскладку и на телефоне */
   @media (max-width: 768px) {
     .container {
-      flex-direction: column;
-      gap: 20px; /* чуть меньше между колонками */
-    }
-  
-    .column {
-      gap: 8px; /* минимальные отступы между вещами */
+      flex-direction: row;
+      gap: 0px;
+      flex-wrap: nowrap;
     }
   
     .item {
-      width: 150px; /* чуть меньше, чтобы точно влезло */
+      width: 180px;
     }
   
     .generate-btn {
@@ -71,15 +81,4 @@ body {
       font-size: 16px;
     }
   }
-  .logo-container {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-  }
   
-  .logo {
-    width: 80px;
-    height: auto;
-    object-fit: contain;
-  }
